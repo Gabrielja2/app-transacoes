@@ -1,4 +1,4 @@
-# Bem vindos ao repositório desáfio_NG_CASH
+# Bem vindos ao repositório do desáfio_NG_CASH que realizei a um tempinho atrás.
 
 <details>
 <summary><strong>👨‍💻 O que foi desenvolvido</strong></summary><br />
