@@ -8,7 +8,7 @@
 </details>
 
 <strong>
-    Inicialmente o planejado era construir uma apliacação fullstack dockerizada, utilizando Node.js, Express.js, Sequelzie como ORM, React.js entre outras ferramentas. Porém devido ao prazo de entrega e o nível de dificuldade que tive para concluir a aplicação backend que era meu foco, infelizmente eu não consegui nem se quer iniciar a aplicação frontend, apesar de ter planejado e traçado as etapas de desenvolvimento conforme abaixo:
+   Em breve irei atualizar o frontend conforme abaixo:
 </strong>
 
 ## Backend
