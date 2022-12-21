@@ -1,0 +1,49 @@
+version: '3.9'
+services:
+
+  backend:
+    container_name: app_backend
+    build: ./backend
+    ports:
+      - 3001:3001
+    working_dir: /app/backend
+    command: npm run dev
+    volumes:
+      - ./backend:/app/backend
+    depends_on: 
+      db:
+        condition: service_healthy
+
+    environment:
+      - PG_HOST=localhost
+      - PG_USER=postgres
+      - PG_PASSWORD=postgres
+      - PG_DATABASE=ng_cash_db
+      - PG_PORT=5432
+    healthcheck:
+      test: ["CMD", "lsof", "-t", "-i:3001"]
+      timeout: 10s
+      retries: 3
+
+  db:
+    image: postgres
+    container_name: app_db   
+    ports:
+      - 5432:5432  
+    environment:
+      - PG_PASSWORD=postgres
+      - PG_USER=postgres
+      - PG_DATABASE=ng_cash_db
+    volumes: 
+      - ./pgdata:/var/lib/postgresql/data
+
+    healthcheck:
+      test: ["CMD", "pg_isready -U postgres"]
+      timeout: 10s
+      retries: 5
+
+volumes:
+  pgdata:      
+
+    
+    
